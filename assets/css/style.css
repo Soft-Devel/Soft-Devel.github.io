@@ -12,11 +12,9 @@
 
 
 body {
-    width: 100%;
     color: var(--secondary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--primary-color);
-    border: 2px green solid;
 }
 
 header {
@@ -25,9 +23,12 @@ header {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      border: 2px red solid;
 }
 
 header h1 {
+      border: 2px black solid;
+      text-align: center;
       font-weight: normal;
       padding-left: 60px;
       font-size: 36px;
@@ -51,9 +52,9 @@ header nav ul {
 header nav ul li a {
     font-weight: normal;
     color: var(--tertiary-color);
-    padding: 5px 15px;
+    padding: 1px 15px;
     margin: 0 5px;
-    border-bottom: 5px var(--secondary-color) solid;
+    border-bottom: 2px var(--tertiary-color) solid;
     font-weight: normal;
     font-size: 20px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -80,6 +81,7 @@ header nav ul li a {
     border-radius: 5px;
     margin: 30px;
     padding: 5px 10px;
+    font-weight: normal;
 }
 
 
@@ -100,6 +102,7 @@ header nav ul li a {
     margin-right: 5px;
     border-right: 2px var(--secondary-color) solid;
     min-width: 200px;
+    border: 2px green solid;
 }
 
 .about-title-wrapper h2 {
@@ -109,6 +112,7 @@ header nav ul li a {
 
 .about-text {
     padding-left: 25px;
+    margin-right: 35px;
     display: flex;
 }
 
@@ -116,6 +120,7 @@ header nav ul li a {
     margin: 20px auto;
     height: 450px;
     display: flex;
+    border: 3px red solid;
 }
 
 .work-title-wrapper {
@@ -127,6 +132,7 @@ header nav ul li a {
     margin-right: 5px;
     border-right: 2px var(--secondary-color) solid;
     min-width: 200px;
+    border: 3px blue solid;
 }
 
 .work-title-wrapper h2{
@@ -136,6 +142,8 @@ header nav ul li a {
 .work-grid {
     display: flex;
     width: 100%;
+    margin-right: 35px;
+    border: 3px green solid;
 }
 
 .grid-container {
@@ -148,7 +156,7 @@ header nav ul li a {
 }
 
 .grid-item1 {
-    background-image: url(../images/qualityjumbo.jpg);
+    background-image: url(../images/digital-marketing-meeting.jpg);
     background-size: cover;
     grid-column: 1 / 3;
     grid-row: 1/3;
@@ -156,10 +164,11 @@ header nav ul li a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    background-position: center;
 }
 
 .grid-item2 {
-    background-image: url(../images/qualityjumbo.jpg);
+    background-image: url(../images/hero-bg.jpg);
     background-size: cover;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
@@ -167,6 +176,7 @@ header nav ul li a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;    
+    background-position: center;
 }
 
 .grid-item3 {
@@ -178,6 +188,7 @@ header nav ul li a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    background-position: center;
 }
 
 .grid-item4 {
@@ -189,6 +200,7 @@ header nav ul li a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    background-position: center;
 }
 
 .grid-item5 {
@@ -200,6 +212,7 @@ header nav ul li a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    background-position: center;
 }
 
 .headings, #heading1{
@@ -213,6 +226,7 @@ header nav ul li a {
     margin: 20px auto;    
     display: flex;
     height: 100px;
+    border: 3px red solid;
 }
 
 
@@ -227,6 +241,7 @@ header nav ul li a {
     align-items: top;
     border-right: 2px var(--secondary-color) solid;
     min-width: 200px;
+    border: 2px green solid;
 }
 
 .contact-title-wrapper h2 {
@@ -240,12 +255,14 @@ header nav ul li a {
     align-items: center;
     padding: 10px 50px;
     width: 100%;
+    border: black solid;
 }
 
 .list-items {
     width: 100%;
     display: inline-flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .list-items a {
@@ -255,35 +272,26 @@ header nav ul li a {
 
 .ways-to-contact a {
     text-decoration: none;
+    text-decoration:underline;
 }
 
 .ways-to-contact ul {
+    
     list-style: none;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-    .work-title {
-        padding-left: 55px;
 
-    }
-
-    .about-title {
-        padding-left: 72px;
-    }
+    .list-items a {
+        padding: 25px 0 ;
+        font-size: 13px;
+    }  
 
 }
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-
-    .work-title {
-        padding-left: 20px;
-    }
-
-    .about-title {
-        padding-left: 5px;
-    }
 
     .headings {
         font-size: 14px;
@@ -293,13 +301,19 @@ header nav ul li a {
     header {
         justify-content: center;
         padding: 10px 0 0 0;
-}
+    }
 
     header h1 {
-        padding: 0 15px;        
+        padding: 0 15px;   
+        margin: 15px 0;     
     }
     header nav ul {
         padding: 10px 0 25px 0;
+    }
+
+    .hero {
+
+    height: 350px;
     }
 
     .hero-title {
@@ -307,6 +321,47 @@ header nav ul li a {
         margin-right: 5px;
     }
  
+    .work-title-wrapper {
+        min-width: 120px;
+    }
+
+    .about-wrapper {
+        max-height: 200px;
+    }
+
+    .about-text {
+        font-size: 12px;
+    }
+
+    .about-title-wrapper {
+        min-width: 120px;
+        font-size: 14px;
+    }
+
+    .contact-wrapper {
+        margin: initial;
+    }
+
+    .contact-title-wrapper {
+        min-width: 120px;
+        padding-left: initial;
+    }
+
+    .contact-title-wrapper h2 {
+        padding-left: initial;
+    }
+
+    .list-items a {
+        padding: 10px 15px;
+    }
+
+    .work-wrapper {
+        height: 400px;
+        width: 100%;
+        margin-right: 20px;
+        overflow: auto;
+    }
+
   }  
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
@@ -314,28 +369,54 @@ header nav ul li a {
     .about-wrapper {
         margin: 10px;
         flex-direction: column;
+        max-height: initial;
+    }
+
+    .about-title-wrapper {
+        justify-content: center;
+        flex-wrap: nowrap;
     }
 
     .about-title {
+        font-size: 16px;
         text-align: center;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         border-bottom: 2px var(--secondary-color) solid;
         border-right: none;
         margin: 0 90px 10px 90px ;
         padding: 0 45px;
+        }
+
+    .about-title-wrapper h2 {
+        margin-bottom: 5px;
+        padding-bottom: initial;
     }
 
     .about-text {
         text-align: none;
+        font-size: 10px;
         justify-content: center;
-        padding-left: 0;
+        padding: 0 20px;
+        margin: initial;
     }
 
     .work-wrapper {
         margin: 10px;
         flex-direction: column;
-        height: 200px;
+        height: auto;
+    }
+
+    .work-title-wrapper {
+        justify-content: center;
+    }
+
+    .work-grid {
+        display: inline-block;
+        padding:initial;
+        height: auto;
+        margin: initial;
+
     }
 
     .work-title {
@@ -349,11 +430,75 @@ header nav ul li a {
     }
 
     .grid-container {
-        padding-left: 0;
+        padding-left: initial;
+        display: inline-flex;
+        flex-direction: column;
     }
+
+    .grid-item1 {
+        min-height: 200px;
+    }
+
+    .grid-item2 {
+        min-height: 125px;
+    }
+
+    .grid-item3 {
+        min-height: 125px;
+    }
+
+    .grid-item4 {
+        min-height: 125px;
+    }
+
+    .grid-item5 {
+        min-height: 125px;
+    }
+
 
     .hero-title {
         font-size: 22px;
     }
+
+    .hero {
+        height: 300px;
+    }
+
+    .contact-wrapper {
+        margin: 20px 0 0 0 ;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact-title-wrapper {
+        justify-content: center;
+    }
+
+    .grid-container {
+        padding: initial;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 26px;
+        margin: 20px 15px;
+    }
+
+    header nav ul {
+        border: 2px green solid;
+        flex-direction: column;
+        padding: 5px 5px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+        }
+
+    .hero-title {
+        font-size: 16px;
+    }    
 
 }
